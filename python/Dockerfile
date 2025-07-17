@@ -1,4 +1,4 @@
-ARG BASE=docker.io/euler/openeuler:25.03
+ARG BASE=docker.io/qitong8899/openeuler:25.03
 ARG VERSION=3.9.1
 
 FROM ${BASE} as builder
