@@ -38,7 +38,7 @@ jobs:
           platforms: ${{ matrix.arch }}
           tags: |
             
-            docker.io/Kirin2003/openeuler
+            docker.io/euler/openeuler
             
           file: ${{ github.workspace }}/openeuler/Dockerfile
           context: ${{ github.workspace }}/openeuler
@@ -86,8 +86,8 @@ jobs:
         working-directory: ${{ runner.temp }}/digests
         run: |
           
-          docker buildx imagetools create -t docker.io/Kirin2003/openeuler:25.03 \
-            $(printf 'docker.io/Kirin2003/openeuler@sha256:%s ' *)
+          docker buildx imagetools create -t docker.io/euler/openeuler:25.03 \
+            $(printf 'docker.io/euler/openeuler@sha256:%s ' *)
           
           echo "timestamp=$(date -u +'%Y-%m-%d %H:%M:%S')" >> $GITHUB_ENV
 
@@ -105,7 +105,7 @@ jobs:
                 "info": {
                   "archs": ["x86_64"],
                   "registries": ["docker.io"],
-                  "repository": "Kirin2003",
+                  "repository": "euler",
                   "name": "openeuler",
                   "version": "25.03",
                   "tag": "25.03",
@@ -161,7 +161,7 @@ jobs:
           platforms: ${{ matrix.arch }}
           tags: |
             
-            docker.io/Kirin2003/python
+            docker.io/euler/python
             
           file: ${{ github.workspace }}/python/Dockerfile
           context: ${{ github.workspace }}/python
@@ -209,8 +209,8 @@ jobs:
         working-directory: ${{ runner.temp }}/digests
         run: |
           
-          docker buildx imagetools create -t docker.io/Kirin2003/python:3.9.1-oe2503 \
-            $(printf 'docker.io/Kirin2003/python@sha256:%s ' *)
+          docker buildx imagetools create -t docker.io/euler/python:3.9.1-oe2503 \
+            $(printf 'docker.io/euler/python@sha256:%s ' *)
           
           echo "timestamp=$(date -u +'%Y-%m-%d %H:%M:%S')" >> $GITHUB_ENV
 
@@ -228,7 +228,7 @@ jobs:
                 "info": {
                   "archs": ["x86_64"],
                   "registries": ["docker.io"],
-                  "repository": "Kirin2003",
+                  "repository": "euler",
                   "name": "python",
                   "version": "3.9.1",
                   "tag": "3.9.1-oe2503",
