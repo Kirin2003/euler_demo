@@ -86,7 +86,7 @@ jobs:
         working-directory: ${{ runner.temp }}/digests
         run: |
           
-          docker buildx imagetools create -t docker.io/qitong8899/openeuler:25.03 \
+          docker buildx imagetools create -t docker.io/qitong8899/openeuler:22.03_lts \
             $(printf 'docker.io/qitong8899/openeuler@sha256:%s ' *)
           
           echo "timestamp=$(date -u +'%Y-%m-%d %H:%M:%S')" >> $GITHUB_ENV
@@ -107,8 +107,8 @@ jobs:
                   "registries": ["docker.io"],
                   "repository": "qitong8899",
                   "name": "openeuler",
-                  "version": "25.03",
-                  "tag": "25.03",
+                  "version": "22.03_LTS",
+                  "tag": "22.03_lts",
                   "status": "${{ job.status }}"
                 }
               }
@@ -209,7 +209,7 @@ jobs:
         working-directory: ${{ runner.temp }}/digests
         run: |
           
-          docker buildx imagetools create -t docker.io/qitong8899/python:3.9.1-oe2503 \
+          docker buildx imagetools create -t docker.io/qitong8899/python:3.11.1-oe2203_lts \
             $(printf 'docker.io/qitong8899/python@sha256:%s ' *)
           
           echo "timestamp=$(date -u +'%Y-%m-%d %H:%M:%S')" >> $GITHUB_ENV
@@ -230,8 +230,8 @@ jobs:
                   "registries": ["docker.io"],
                   "repository": "qitong8899",
                   "name": "python",
-                  "version": "3.9.1",
-                  "tag": "3.9.1-oe2503",
+                  "version": "3.11.1",
+                  "tag": "3.11.1-oe2203_lts",
                   "status": "${{ job.status }}"
                 }
               }

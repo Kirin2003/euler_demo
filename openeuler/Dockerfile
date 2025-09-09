@@ -4,7 +4,7 @@ FROM openeuler/openeuler:24.03-lts as builder
 
 ARG TARGETARCH
 
-ARG VERSION=25.03
+ARG VERSION=22.03_LTS
 
 RUN yum install -y wget xz tar
 
