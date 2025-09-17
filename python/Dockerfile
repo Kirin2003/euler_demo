@@ -1,5 +1,5 @@
 ARG BASE=docker.io/qitong8899/openeuler:22.03_lts
-ARG VERSION=3.11.1
+ARG VERSION=3.9.1
 
 FROM ${BASE} as builder
 
